@@ -1,0 +1,22 @@
+[package]
+name = "aocli"
+version = "0.1.0"
+edition = "2021"
+description = "A CLI for Advent of Code"
+authors = ["MarvelousAnything"]
+
+[[bin]]
+name = "aocli"
+path = "src/cli/app.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.1.8", features = ["derive"] }
+miette = { version = "5.5.0", features = ["fancy"] }
+reqwest = { version = "0.11.14", features = ["cookies"] }
+serde = { version = "1.0.152", features = ["derive"] }
+thiserror = "1.0.38"
+tokio = { version = "1.26.0", features = ["full"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["tracing"] }
